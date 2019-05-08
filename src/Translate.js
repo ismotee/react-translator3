@@ -1,8 +1,10 @@
 import React from "react";
 import Context from "./Context";
 
-const translate = (lang, str, translations) => {
+const translate = (lang, str, translations = {}) => {
   if (!lang || !translations[lang] || !translations[lang][str]) return str;
+  if (translations[lang][str] instanceof Function)
+    return translations[lang][str]();
   return translations[lang][str];
 };
 
@@ -11,7 +13,17 @@ export class Translate extends React.Component {
     return (
       <Context.Consumer>
         {context =>
-          translate(context.language, this.props.children, context.translation)
+          !this.props.language
+            ? translate(
+                context.language,
+                this.props.children,
+                context.translation
+              )
+            : translate(
+                this.props.language,
+                this.props.children,
+                context.translation
+              )
         }
       </Context.Consumer>
     );

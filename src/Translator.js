@@ -17,6 +17,9 @@ export class Translator extends React.Component {
     } else {
       this.setState({ translation: {} });
     }
+    if (this.props.language) {
+      this.setState({ language: this.props.language });
+    }
   }
 
   render() {
