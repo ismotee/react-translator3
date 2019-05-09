@@ -1,6 +1,6 @@
 {
   "name": "react-translator3",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "translation components for react",
   "main": "dist/index.js",
   "scripts": {
@@ -31,6 +31,7 @@
     "localisation",
     "translation",
     "translate",
-    "component"
+    "component",
+    "i18n"
   ]
 }

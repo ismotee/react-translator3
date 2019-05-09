@@ -129,7 +129,7 @@ import {Translate as T} from "react-translator3";
 ```
 
 You can use functions in translation object as long as functions return a string.
-Note that in this case it is wise to give `<Translator>` a default language. Otherwise you will see only "today" as a plain string rendered.
+Note that in this case it is wise to give `<Translator>` a default language. Otherwise you will see only "today" rendered as a plain string.
 
 ```
 import React from "react";
@@ -145,7 +145,7 @@ const translation = {
 
 const LocalClock = () => {
     return (
-        <Translator>
+        <Translator language="en" translation={translation}>
             <div><T>today</T></div>
         </Translator>
     );
