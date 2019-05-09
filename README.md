@@ -91,8 +91,8 @@ There's only three components in react-translator3.
 - usage:
 
 ```
-<Translator translation={"slithering":{"This is some text.": "SSHHSAaAHSLLLHHSSSSHHHAAAaa!"}"}>
-<Translate>This is some text.</Translate>
+<Translator translation={"parcelmouth":{"This is some text.": "SSHHSAaAHSLLLHHSSSSHHHAAAaa!"}"}>
+<Translate language="parcelmouth">This is some text.</Translate>
 </Translator>
 ```
 
